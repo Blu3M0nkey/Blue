@@ -1,0 +1,150 @@
+:root {
+    --color-primary-0: #29d1ff;	/* Main Primary color */
+    --color-primary-1: #e6f9ff; /* Content box bckgrd */
+    --color-primary-2: #93C0CC; /* Content Shadow  */
+    --color-primary-3: #e2f0f4; /* side bckgrd color */
+    --color-primary-4: #002029; /* menu bckgrd */    
+}
+body {
+    background-color: var(--color-primary-3);
+    margin: 0px;
+}
+
+.column{
+    float:left;
+    padding:10px;
+    border-radius: 2px;
+    box-shadow: 2px 3px var(--color-primary-2);
+}
+/* left and right column */
+.column.side{
+    width:20%;
+    background-color:var(--color-primary-1);
+}
+.column.side.left{
+    width:30%;
+    min-width: 175px;
+}
+/* Middle Column */
+.column.middle {
+    width:50%;
+    margin:5px;
+    background-color: white;   
+}
+.column.middle.right{
+    width:60%;
+}
+
+/* Responsive*/
+@media screen and (max-width:600px){
+    .column.side, .column.middle, .column.side.left{
+        width:100%;
+    }
+}
+.row{
+    padding-left: 5px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+navigation ul{
+    list-style-type: none;
+    margin: auto;
+    overflow: hidden;
+    background-color: var(--color-primary-4);
+    padding: 0px;
+}
+navigation li{
+    display: inline;
+    float: left;
+}
+ 
+navigation li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+a:link{ 
+    color: var(--color-primary-0);
+}
+navigation a:hover{
+    background-color: darkslategrey;
+    color:var(--color-primary-0);
+}
+navigation a:visited{
+    color:var(--color-primary-0);
+}
+navigation li .dropdown{
+    display: inline-block;
+}
+navigation .dropdown_content{
+    display: none;
+    position: absolute;
+    background-color: black;
+    z-index:1;
+}
+.dropdown:hover .dropdown_content{
+    display: block;
+}
+navigation .right_nav{
+    float: right;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    background-color: var(--color-primary-0);
+    text-align: center;
+    padding: 20px;
+}
+header {
+    background-image: url(../images/Butterfly), url(../images/title_bckgrd_lines.png);
+    background-size: 75px, 100% 75px;
+    background-repeat: no-repeat;
+    background-position: left, bottom;
+    padding-left: 70px;
+    padding-bottom: 15px;
+}
+div#content{
+    padding: 5px;
+}
+form table.data{
+    width: 100%;
+    border-collapse: collapse;
+}
+form td{
+    border-bottom:0px none none;
+}
+
+div.Recipe Listing {
+    overflow-x:auto;
+}
+table.list{
+    border-collapse: collapse;
+    width: 100%;    
+}
+table.list tr th{
+    background-color: var(--color-primary-4);
+    color: var(--color-primary-0);
+    min-width: 25px;
+}
+table.list td{
+    height: 35px; 
+}
+table.list tr:hover{
+   background-color: var(--color-primary-2); 
+}
+table.list th, td{
+    border-bottom: 2px solid var(--color-primary-4);
+}
+
+.error{
+    color:firebrick;
+}
+#ingredients img{
+    vertical-align: middle;
+}
