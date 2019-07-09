@@ -24,6 +24,7 @@ body {
 .column.side.left{
     width:30%;
     min-width: 175px;
+    max-width: 250px;
 }
 /* Middle Column */
 .column.middle {
@@ -37,8 +38,9 @@ body {
 
 /* Responsive*/
 @media screen and (max-width:600px){
-    .column.side, .column.middle, .column.side.left{
+    .column.side, .column.middle, .column.side.left, .column.middle.right{
         width:100%;
+        max-width:none;
     }
 }
 .row{
