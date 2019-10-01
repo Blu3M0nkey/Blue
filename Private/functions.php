@@ -12,13 +12,33 @@ function redirect_to($address){
 }
 function h($val){
     return htmlspecialchars($val);
-}
+} // html special Chars, for sql security. 
+
 function is_post_request(){
     return $_SERVER['REQUEST_METHOD'] == 'POST';
 }
 
+function is_post_set($str){
+    return (isset($_POST[$str]) && $_POST[$str] != '');
+} 
+
 function is_get_request(){
     return $_SERVER['REQUEST_METHOD'] == 'GET';
 }
+
+function display_errors($errors = array()){
+    $output = '';
+    if(!empty($errors)){
+        $output.= "<div class=\"error\">";
+        $output.= "<ul>";
+        foreach($errors as $e){
+            $output.="<li>".$e."</li>";
+        }
+        $output.="</ul></div>";
+    }
+    return $output;
+    
+    
+}// output error arrays. 
 
 ?>

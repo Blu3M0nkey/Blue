@@ -38,20 +38,20 @@
         }
     }
     echo "<div class='column side left'";
-    echo 'Title='.$title;
-    echo '<br>Course='.$Course;
-    echo '<br>type='.$type;
-    echo '<br>Nat='.$nation;
-    echo '<br>ing='.'<pre>';print_r($ingName);echo'</pre>';
-    echo 'amount'.'<pre>';print_r($amount);echo'</pre>';
-    echo "dir = ".'<pre>';print_r($directions);echo'</pre></div>';
+    echo 'Title='.$title; //recipe_name
+    echo '<br>Course='.$Course; //course_name
+    echo '<br>Diet ='.$type; //menu_name
+    echo '<br>Nationality='.$nation; //menu_name ??
+    echo '<br>Ingredients='.'<pre>';print_r($ingName);echo'</pre>'; //ingredient_name
+    echo 'Ingredient Amount'.'<pre>';print_r($amount);echo'</pre>'; // amount 
+    echo "directions = ".'<pre>';print_r($directions);echo'</pre></div>'; //Recipe_steps . Instructions
 ?>
 <div class="column middle right" style="padding-bottom:75px;">
      <p class="error"> * Required <br/></p>
     <form action="<?= url_for("admin/recipes/editRecipe.php"); ?>" method="post">
         <dl>
             <dt>Recipe Name:</dt>
-            <dd><input type="text" name="Title" value="<?= h($title);?>"><span class="error">*<?=$titleError?></span></dd>
+            <dd><input type="text" name="Title" value="<?= h($title);?>" required><span class="error">*<?=$titleError?></span></dd>
         </dl>
         <dl>
             <dt>Course</dt>

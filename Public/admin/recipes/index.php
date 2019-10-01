@@ -18,7 +18,7 @@
         <h2> Recipes </h2>
         
         <div class="actions">
-            <div class="action" href="<?= url_for('/admin/recipes.addrecipe.php');?>">Add New Recipe</div>
+            <a class="action" href="<?= url_for('/admin/recipes/addRecipe.php');?>">Add New Recipe</a>
         </div>
         
         <table class='list'>

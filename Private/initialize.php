@@ -26,5 +26,18 @@
     define("WWW_ROOT",$doc_root);
 
     require_once('functions.php');
+    //db functions
+    require_once('db.php');
+    require_once('sqlFunctions.php');
+    
+    //recipe and other functions
+    require_once('recipeFunctions.php');
+    require_once('validations.php');
+
+    // Establish a connection to the database??
+    
+    $db = db_connect();
+    
+    
 
 ?>
